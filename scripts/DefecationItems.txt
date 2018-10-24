@@ -1,0 +1,90 @@
+module Defecation
+{
+	item humanFeces
+	{
+		HungerChange = -5,
+		Weight = 0.2,
+		Type = Food,
+		DaysTotallyRotten = 0,
+		DisplayName = Human Feces,
+		Icon = DHumanFeces,
+		DaysFresh = 0,
+		FoodType = NoExplicit,
+		Poison = TRUE,
+		PoisonPower = 20,
+		StressChange = 25,
+		UnhappyChange = 50,
+		ThirstChange = -5,
+        Carbohydrates = 5,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 50,
+		ResizeWorldIcon = 0.5,
+	}
+	
+	item AntiDiarrhealPillBox
+	{
+		Weight = 0.2,
+		Type = Normal,
+		DisplayName = Anti Diarrheal Pill Box,
+		Icon = DDiarrPillBox,
+		ResizeWorldIcon = 0.5,
+	}
+	
+	item AntiDiarrhealPills
+	{
+		HungerChange = -1,
+		Weight = 0.05,
+		Type = Food,
+		DisplayName = Anti Diarrheal Pills,
+		Icon = DDiarrPill,
+		FoodType = NoExplicit,
+		ThirstChange = 5,
+		OnEat = DEatPill,
+		ResizeWorldIcon = 0.5,
+	}
+	
+	item PooPants
+	{
+		Palettes	=	Trousers_White,
+		BodyLocation	=	Bottoms,
+		PalettesStart	=	Trousers_,
+		Type	=	Clothing,
+		Temperature	=	8,
+		SpriteName	=	Trousers,
+		DisplayName	=	Pants (Defecated),
+		Icon	=	Trousers,
+        ConditionLowerChanceOneIn = 2,
+        ConditionMax	=	1,
+	}
+
+	item PooSkirt
+	{
+		Palettes	=	Skirt_White,
+		BodyLocation	=	Bottoms,
+		PalettesStart	=	Skirt_,
+		Type	=	Clothing,
+		Temperature	=	5,
+		SpriteName	=	Skirt,
+		DisplayName	=	Skirt (Defecated),
+		Icon	=	Skirt,
+		ConditionLowerChanceOneIn = 2,
+        ConditionMax	=	1,
+	}
+	
+	recipe Open Anti Diarrheal Pill Box
+	{
+		AntiDiarrhealPillBox=1,
+		
+		Result:AntiDiarrhealPills=4,
+		Time:10.0,
+	}
+	
+	recipe Box Anti Diarrheal Pills
+	{
+		AntiDiarrhealPills=4,
+		
+		Result:AntiDiarrhealPillBox=1,
+		Time:10.0,
+	}
+}
