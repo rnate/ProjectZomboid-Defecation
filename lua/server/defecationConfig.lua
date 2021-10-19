@@ -7,7 +7,7 @@ function DefecationConfig(module, command, player, args)
 		local config = {
 			["DefecateTimeMultiplier"] = 1.0,
 			["DefecateIncreaseMultiplier"] = 1.0,
-			["DefecatedPantsSkirtMultiplier"] = 1.0,
+			["DefecatedBottomsMultiplier"] = 1.0,
 			["VitaminTimeMultiplier"] = 1.0,
 			["VitaminMaxTimeMultiplier"] = 1.0,
 			["FecesPileUnhealthyMultiplier"] = 1.0,
