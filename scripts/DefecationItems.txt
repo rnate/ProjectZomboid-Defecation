@@ -31,12 +31,12 @@ module Defecation
 		ResizeWorldIcon = 0.5,
 	}
 	
-	item AntiDiarrhealPills
+	item AntiDiarrhealPill
 	{
-		HungerChange = -1,
-		Weight = 0.05,
+		HungerChange = -0.1,
+		Weight = 0.04,
 		Type = Food,
-		DisplayName = Anti Diarrheal Pills,
+		DisplayName = Anti Diarrheal Pill,
 		Icon = DDiarrPill,
 		FoodType = NoExplicit,
 		ThirstChange = 5,
@@ -44,47 +44,11 @@ module Defecation
 		ResizeWorldIcon = 0.5,
 	}
 	
-	item PooPants
-	{
-		Palettes	=	Trousers_White,
-		BodyLocation	=	Bottoms,
-		PalettesStart	=	Trousers_,
-		Type	=	Clothing,
-		Temperature	=	8,
-		SpriteName	=	Trousers,
-		DisplayName	=	Pants (Defecated),
-		Icon	=	Trousers,
-        ConditionLowerChanceOneIn = 2,
-        ConditionMax	=	1,
-	}
-
-	item PooSkirt
-	{
-		Palettes	=	Skirt_White,
-		BodyLocation	=	Bottoms,
-		PalettesStart	=	Skirt_,
-		Type	=	Clothing,
-		Temperature	=	5,
-		SpriteName	=	Skirt,
-		DisplayName	=	Skirt (Defecated),
-		Icon	=	Skirt,
-		ConditionLowerChanceOneIn = 2,
-        ConditionMax	=	1,
-	}
-	
 	recipe Open Anti Diarrheal Pill Box
 	{
 		AntiDiarrhealPillBox=1,
 		
-		Result:AntiDiarrhealPills=4,
-		Time:10.0,
-	}
-	
-	recipe Box Anti Diarrheal Pills
-	{
-		AntiDiarrhealPills=4,
-		
-		Result:AntiDiarrhealPillBox=1,
+		Result:AntiDiarrhealPill=4,
 		Time:10.0,
 	}
 }
