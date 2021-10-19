@@ -34,37 +34,18 @@ function ReceiveConfig(module, command, args)
 end
 Events.OnServerCommand.Add(ReceiveConfig)
 
-local function DefecatedPantsSkirtMood(specificPlayer)
+local function DefecatedBottomsMood(specificPlayer)
 	if (specificPlayer:getClothingItem_Legs()) then
-		if (specificPlayer:getClothingItem_Legs():getName() == "Pants (Defecated)" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Defecated)") then
-			specificPlayer:getStats():setStress(specificPlayer:getStats():getStress() + 0.06 * DefecationArr["Config"]["DefecatedPantsSkirtMultiplier"]); --If they are wearing poo'd pants/skirt, add stress and unhappyness
-			specificPlayer:getBodyDamage():setUnhappynessLevel(specificPlayer:getBodyDamage():getUnhappynessLevel() + 5 * DefecationArr["Config"]["DefecatedPantsSkirtMultiplier"]); -- these are 10% of pooing self
+		if string.find(specificPlayer:getClothingItem_Legs():getName(), "(Defecated)") then
+			specificPlayer:getStats():setStress(specificPlayer:getStats():getStress() + 0.06 * DefecationArr["Config"]["DefecatedBottomsMultiplier"]); --If they are wearing poo'd bottoms, add stress and unhappyness
+			specificPlayer:getBodyDamage():setUnhappynessLevel(specificPlayer:getBodyDamage():getUnhappynessLevel() + 5 * DefecationArr["Config"]["DefecatedBottomsMultiplier"]); -- these are 10% of pooing self
 		end
 	end
 end
 
-local function SwapPantsOrSkirt(specificPlayer)
+local function DefecateBottoms(specificPlayer)
 	if (specificPlayer:getClothingItem_Legs()) then
-		if (specificPlayer:getClothingItem_Legs():getName() == "Pants" or specificPlayer:getClothingItem_Legs():getName() == "Skirt" or
-			specificPlayer:getClothingItem_Legs():getName() == "Pants (Dirty)" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Dirty)" or
-			specificPlayer:getClothingItem_Legs():getName() == "Pants (Bloody)" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Bloody)" or
-			specificPlayer:getClothingItem_Legs():getName() == "Pants (Dirty, Bloody)" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Dirty, Bloody)") then --if they're wearing pants/skirt
-			local invPantsSkirtColor = specificPlayer:getClothingItem_Legs():getColor() --get color of pants/skirt
-			local pooPantsSkirt = nil
-			
-			if (specificPlayer:getClothingItem_Legs():getName() == "Skirt" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Dirty)" or
-				specificPlayer:getClothingItem_Legs():getName() == "Skirt (Bloody)" or specificPlayer:getClothingItem_Legs():getName() == "Skirt (Dirty, Bloody)") then
-				pooPantsSkirt = InventoryItemFactory.CreateItem("Defecation.PooSkirt")
-			elseif (specificPlayer:getClothingItem_Legs():getName() == "Pants" or specificPlayer:getClothingItem_Legs():getName() == "Pants (Dirty)" or
-				specificPlayer:getClothingItem_Legs():getName() == "Pants (Bloody)" or specificPlayer:getClothingItem_Legs():getName() == "Pants (Dirty, Bloody)") then
-				pooPantsSkirt = InventoryItemFactory.CreateItem("Defecation.PooPants")
-			end
-			
-			pooPantsSkirt:setColor(invPantsSkirtColor)
-			specificPlayer:getInventory():AddItem(pooPantsSkirt)
-			specificPlayer:getInventory():Remove(specificPlayer:getClothingItem_Legs())
-			specificPlayer:setClothingItem_Legs(pooPantsSkirt) --equip poo pants/skirt
-		end
+		specificPlayer:getClothingItem_Legs():setName(specificPlayer:getClothingItem_Legs():getName() .. " (Defecated)");
 	end
 end
 
@@ -312,7 +293,7 @@ local function DefecationTimer()
 			AddStress(specificPlayer, defecate)
 			DiarrheaCheck(specificPlayer)
 			VitaminTimer(specificPlayer)
-			DefecatedPantsSkirtMood(specificPlayer)
+			DefecatedBottomsMood(specificPlayer)
 			PooPileCheck(specificPlayer)
 		else
 			defecateCheck = true
@@ -448,7 +429,7 @@ function DefecateAction:perform()
 	if (self.pooSelf) then
 		specificPlayer:getStats():setStress(specificPlayer:getStats():getStress() + 0.6); --If they have poo'd themselves, add stress and unhappyness
 		specificPlayer:getBodyDamage():setUnhappynessLevel(specificPlayer:getBodyDamage():getUnhappynessLevel() + 50);
-		SwapPantsOrSkirt(specificPlayer)
+		DefecateBottoms(specificPlayer)
 		specificPlayer:Say("I've defecated myself...")
 	end
 	
