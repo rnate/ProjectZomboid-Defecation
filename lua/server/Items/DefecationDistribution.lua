@@ -1,19 +1,18 @@
-require 'Items/SuburbsDistributions'
+local function preDistributionMerge()
+    table.insert(ProceduralDistributions.list.BathroomCabinet.items, "Defecation.AntiDiarrhealPill");
+	table.insert(ProceduralDistributions.list.BathroomCabinet.items, 1);
 
-table.insert(SuburbsDistributions["medclinic"]["counter"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["medclinic"]["counter"].items, 1);
+	table.insert(ProceduralDistributions.list.BathroomCounter.items, "Defecation.AntiDiarrhealPill");
+	table.insert(ProceduralDistributions.list.BathroomCounter.items, 1);
 
-table.insert(SuburbsDistributions["medicalstorage"]["all"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["medicalstorage"]["all"].items, 1);
+	table.insert(ProceduralDistributions.list.MedicalClinicDrugs.items, "Defecation.AntiDiarrhealPillBox");
+	table.insert(ProceduralDistributions.list.MedicalClinicDrugs.items, 2);
+	table.insert(ProceduralDistributions.list.MedicalClinicDrugs.items, "Defecation.AntiDiarrhealPillBox");
+	table.insert(ProceduralDistributions.list.MedicalClinicDrugs.items, 2);
 
-table.insert(SuburbsDistributions["medical"]["counter"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["medical"]["counter"].items, 1);
-
-table.insert(SuburbsDistributions["medicaloffice"]["counter"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["medicaloffice"]["counter"].items, 1);
-
-table.insert(SuburbsDistributions["pharmacy"]["shelves"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["pharmacy"]["shelves"].items, 1);
-
-table.insert(SuburbsDistributions["bathroom"]["all"].items, "Defecation.AntiDiarrhealPillBox");
-table.insert(SuburbsDistributions["bathroom"]["all"].items, 1);
+	table.insert(ProceduralDistributions.list.MedicalStorageDrugs.items, "Defecation.AntiDiarrhealPillBox");
+	table.insert(ProceduralDistributions.list.MedicalStorageDrugs.items, 2);
+	table.insert(ProceduralDistributions.list.MedicalStorageDrugs.items, "Defecation.AntiDiarrhealPillBox");
+	table.insert(ProceduralDistributions.list.MedicalStorageDrugs.items, 2);
+end
+Events.OnPreDistributionMerge.Add(preDistributionMerge);
