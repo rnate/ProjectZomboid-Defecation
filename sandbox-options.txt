@@ -1,0 +1,140 @@
+VERSION = 1,
+
+option Defecation.DefecateTimeMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_DefecateTimeMultiplier,
+}
+
+option Defecation.DefecateIncreaseMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_DefecateIncreaseMultiplier,
+}
+
+option Defecation.DefecatedBottomsMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_DefecatedBottomsMultiplier,
+}
+
+option Defecation.VitaminTimeMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_VitaminTimeMultiplier,
+}
+
+option Defecation.VitaminMaxTimeMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_VitaminMaxTimeMultiplier,
+}
+
+option Defecation.FecesPileUnhealthyMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_FecesPileUnhealthyMultiplier,
+}
+
+option Defecation.DiarrheaIncreaseMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_DiarrheaIncreaseMultiplier,
+}
+
+option Defecation.FartNoiseRadiusMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_FartNoiseRadiusMultiplier,
+}
+
+option Defecation.ToiletNoiseRadiusMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_ToiletNoiseRadiusMultiplier,
+}
+
+option Defecation.SickCaloriesRemovedMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_SickCaloriesRemovedMultiplier,
+}
+
+option Defecation.SickThirstRemovedMultiplier
+{
+	type = double,
+	min = 0,
+	max = 100.0,
+	default = 1.0,
+
+	page = Defecation,
+	translation = Defecation_SickThirstRemovedMultiplier,
+}
+
+option Defecation.CanPooSelf
+{
+	type = boolean,
+	default = true,
+
+	page = Defecation,
+	translation = Defecation_CanPooSelf,
+}
+
+option Defecation.ShowNumericStatus
+{
+	type = boolean,
+	default = true,
+
+	page = Defecation,
+	translation = Defecation_ShowNumericStatus,
+}
