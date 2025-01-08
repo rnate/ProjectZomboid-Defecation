@@ -1,0 +1,9 @@
+UI_EN = {
+	UI_optionscreen_binding_DefecationStatus = "Defecation Status",
+	
+	UI_options_1436878551ShowNumericStatus_checkBox = "Show Numeric Status",
+	UI_options_1436878551ShowNumericStatus_checkBox_tooltip = "Uncheck to hide numbers shown on 'Defecation Status' window",
+	
+	UI_options_1436878551DefecationStatus_keybind = "Defecation Status",
+	UI_options_1436878551DefecationStatus_keybind_tooltip = "Keybind to show/hide 'Defecation Status' window"
+}
