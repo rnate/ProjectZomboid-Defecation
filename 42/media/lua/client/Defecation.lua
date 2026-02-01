@@ -144,14 +144,15 @@ DefecationFunctions.RightClick = function(player, context, worldObjects)
 			end
 
 			local objectModData = (object:hasModData() and object:getModData()) or nil
-			if (string.find(customName, "toilet") and objectModData ~= nil and objectModData["waterMax"] >= 9000) then
+			local hasBuggedWater = objectModData ~= nil and objectModData["waterMax"] and objectModData["waterMax"] >= 9000
+			if (string.find(customName, "toilet") and hasBuggedWater) then
 				objectModData["waterMax"] = 20
 				objectModData["waterAmount"] = 20
 				object:transmitModData()
 			end
 		end
 
-		if (defecate >= 0.4 and checkForFixture and object:hasWater() and object:getWaterAmount() >= 10.0) then
+		if (defecate >= 0.4 and checkForFixture and object:hasWater() and object:getFluidAmount() >= 10.0) then
 			local source = DefecationFunctions.GetMoveableDisplayName(object)
 			if source == nil and instanceof(object, "IsoWorldInventoryObject") and object:getItem() then
 				source = object:getItem():getDisplayName()
@@ -422,7 +423,7 @@ DefecationFunctions.WashRightClick = function(_, context, worldObjects)
 			if storeWater:hasComponent(ComponentType.FluidContainer) then
 				waterRemaining = storeWater:getFluidContainer():getAmount()
 			else
-				waterRemaining = storeWater:getWaterAmount()
+				waterRemaining = storeWater:getFluidAmount()
 			end
 
 			if (waterRemaining < 7 or bleachValue < 0.3) then
@@ -741,21 +742,11 @@ DefecationFunctions.OopsPoop = function(specificPlayerModData)
 			sickModifier = 0.06
 		end
 
-		if (getGameTime():getTrueMultiplier() <= 5 and defecate >= .4 and ZombRand(6) == 0) then
-			local stomachGrowlChoice = ZombRand(3)
-			local stomachNoise = "D_Growl1"
-
-			if (stomachGrowlChoice <= 0) then
-				stomachNoise = "D_Growl1"
-			elseif (stomachGrowlChoice == 1) then
-				stomachNoise = "D_Growl2"
-			elseif (stomachGrowlChoice == 2) then
-				stomachNoise = "D_Growl3"
-			elseif (stomachGrowlChoice == 3) then
-				stomachNoise = "D_Growl4"
+		if (DefecationFunctions.options.StomachSounds:getValue()) then
+			if (getGameTime():getTrueMultiplier() <= 5 and defecate >= .4 and ZombRand(6) == 0) then
+				local stomachNoise = "D_Growl" .. tostring(ZombRand(4) + 1)
+				DefecationFunctions.specificPlayer:playSound(stomachNoise)
 			end
-
-			DefecationFunctions.specificPlayer:playSound(stomachNoise)
 		end
 
 		if (panic > 0 and defecate >= 0.48 - sickModifier and defecate <= 0.56 - sickModifier and pooChance == 0) then
@@ -879,7 +870,9 @@ DefecationFunctions.FartNoiseAndRadius = function()
 		fartRadius = 15
 	end
 
-	DefecationFunctions.specificPlayer:playSound(fartNoise)
+	if (DefecationFunctions.options.DefecateSounds:getValue()) then
+		DefecationFunctions.specificPlayer:playSound(fartNoise)
+	end
 	addSound(DefecationFunctions.specificPlayer, DefecationFunctions.specificPlayer:getX(), DefecationFunctions.specificPlayer:getY(), DefecationFunctions.specificPlayer:getZ(), fartRadius * SandboxVars.Defecation.FartNoiseRadiusMultiplier, 5)
 end
 

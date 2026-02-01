@@ -53,14 +53,13 @@ function DefecationFunctions.DefecateAction:perform()
 	DefecationFunctions.FartNoiseAndRadius()
 
 	local specificPlayerSquare = DefecationFunctions.specificPlayer:getCurrentSquare()
-
 	if (self.toiletObject ~= nil) then
 		specificPlayerSquare:playSound("D_Flush")
 		addSound(DefecationFunctions.specificPlayer, DefecationFunctions.specificPlayer:getX(), DefecationFunctions.specificPlayer:getY(), DefecationFunctions.specificPlayer:getZ(), 10 * SandboxVars.Defecation.ToiletNoiseRadiusMultiplier, 10)
 
 		local postWaterShutoff = getGameTime():getWorldAgeHours() / 24 + (getSandboxOptions():getTimeSinceApo() - 1) * 30 > getSandboxOptions():getOptionByName("WaterShutModifier"):getValue()
 		if (postWaterShutoff) then
-			self.toiletObject:setWaterAmount(self.toiletObject:getWaterAmount() - 10)
+			self.toiletObject:useFluid(10)
 			self.toiletObject:transmitModData()
 		end
 	else

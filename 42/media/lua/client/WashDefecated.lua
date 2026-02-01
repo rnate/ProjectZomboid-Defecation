@@ -61,16 +61,16 @@ function DefecationFunctions.WashDefecatedAction:perform()
 	triggerEvent("OnClothingUpdated", DefecationFunctions.specificPlayer)
 
 	if (instanceof(self.storeWater, "IsoWorldInventoryObject")) then
-		self.storeWater:useWater(7)
+		self.storeWater:useFluid(7)
 		self.storeWater:transmitModData()
 	elseif (self.storeWater:hasComponent(ComponentType.FluidContainer)) then
 		local waterFluidContainer = self.storeWater:getFluidContainer()
 		waterFluidContainer:adjustAmount(waterFluidContainer:getAmount() - 7)
-	elseif (self.storeWater:getWaterAmount() ~= nil) then
+	elseif (self.storeWater:getFluidAmount() ~= nil) then
 		local postWaterShutoff = getGameTime():getWorldAgeHours() / 24 + (getSandboxOptions():getTimeSinceApo() - 1) * 30 > getSandboxOptions():getOptionByName("WaterShutModifier"):getValue()
 
 		if (postWaterShutoff) then
-			self.storeWater:useWater(7)
+			self.storeWater:useFluid(7)
 			self.storeWater:transmitModData()
 		end
 	end
