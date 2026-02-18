@@ -1,0 +1,5 @@
+ContextMenu_IT = {
+	ContextMenu_Defecate = "Defeca",
+	ContextMenu_Defecated = " (Defecato)",
+	ContextMenu_DefecateSterilize = "Sterilizza",
+}

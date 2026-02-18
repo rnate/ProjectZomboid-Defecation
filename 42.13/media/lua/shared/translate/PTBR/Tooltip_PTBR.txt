@@ -1,0 +1,11 @@
+Tooltip_PTBR = {
+	Tooltip_AntiDiarrhealPill = "Tome UMA (1) cápsula conforme necessário a cada TRÊS (3) horas.<br>Não tome mais de duas cápsulas a cada 6 horas.",
+	Tooltip_DefecateDefault = "Use 1 lençol rasgado, folha de papel, lenço de papel, papel higiênico, esponja, panfleto, folheto, guardanapo de papel, documentos, correspondência, carta ou jornal para defecar.",
+	Tooltip_DefecateNeed = "Você precisa de pelo menos 1 lençol rasgado, folha de papel, lenço de papel, papel higiênico, esponja, panfleto, folheto, guardanapo de papel, documentos, correspondência, carta ou jornal para defecar.",
+	Tooltip_DefecateDriving = "Você não pode defecar enquanto dirige.",
+	Tooltip_DefecateUse = "Use ",
+	Tooltip_DefecateToDefecate = " para defecar.",
+	Tooltip_DefecateNotPotentEnough = " não é forte o suficiente.",
+	Tooltip_DefecatedSelf = "Eu me sujei...",
+	Tooltip_DefecateBurnFeces = "Queimar Fezes"
+}

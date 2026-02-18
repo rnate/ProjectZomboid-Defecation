@@ -1,0 +1,39 @@
+Sandbox_IT = {
+	Sandbox_Defecation = "Defecazione",
+
+	Sandbox_Defecation_DefecateTimeMultiplier = "Moltiplicatore del tempo di defecazione",
+	Sandbox_Defecation_DefecateTimeMultiplier_tooltip = "Quanto tempo ci vuole per defecare dopo aver iniziato il processo",
+
+	Sandbox_Defecation_DefecateIncreaseMultiplier = "Moltiplicatore dell'aumento di defecazione",
+	Sandbox_Defecation_DefecateIncreaseMultiplier_tooltip = "La velocità con cui la percentuale di defecazione aumenta ogni dieci minuti",
+
+	Sandbox_Defecation_DefecatedBottomsMultiplier = "Moltiplicatore umorale della defecazione",
+	Sandbox_Defecation_DefecatedBottomsMultiplier_tooltip = "Quanto stress e infelicità si guadagnano ogni dieci minuti",
+
+	Sandbox_Defecation_VitaminTimeMultiplier = "Moltiplicatore del tempo della vitamina",
+	Sandbox_Defecation_VitaminTimeMultiplier_tooltip = "Per quanto tempo le vitamine antidiarroiche possono fare effetto",
+
+	Sandbox_Defecation_VitaminMaxTimeMultiplier = "Moltiplicatore del tempo massimo della vitamina",
+	Sandbox_Defecation_VitaminMaxTimeMultiplier_tooltip = "La quantità massima di tempo in cui le vitamine possono avere effetto se vengono assunte più volte",
+
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier = "Moltiplicatore malsano del mucchio di feci",
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier_tooltip = "Quanto malessere e infelicità il giocatore trae dai mucchi di feci nelle vicinanze",
+
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier = "Moltiplicatore di aumento della diarrea",
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier_tooltip = "Quanto la diarrea può moltiplicare la percentuale di defecazione",
+
+	Sandbox_Defecation_FartNoiseRadiusMultiplier = "Moltiplicatore del raggio delle scoregge",
+	Sandbox_Defecation_FartNoiseRadiusMultiplier_tooltip = "Quanto può essere forte il rumore dopo la defecazione",
+
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier = "Moltiplicatore del raggio del rumore della toilette",
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier_tooltip = "Quanto può essere rumorosa la toilette",
+
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier = "Moltiplicatore delle calorie eliminate dai malati",
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier_tooltip = "Quantità di calorie eliminate quando si è malati",
+
+	Sandbox_Defecation_SickThirstRemovedMultiplier = "Moltiplicatore di sete rimosso dei malati",
+	Sandbox_Defecation_SickThirstRemovedMultiplier_tooltip = "Quantità di sete eliminata quando si è malati",
+
+	Sandbox_Defecation_CanPooSelf = "Può farsi la cacca addosso",
+	Sandbox_Defecation_CanPooSelf_tooltip = "Deselezionare per disabilitare la funzione 'defecarsi addosso'",
+}

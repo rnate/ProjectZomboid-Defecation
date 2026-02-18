@@ -1,0 +1,5 @@
+ContextMenu_PTBR = {
+	ContextMenu_Defecate = "Defecar",
+	ContextMenu_Defecated = " (Defecado)",
+	ContextMenu_DefecateSterilize = "Esterilizar",
+}

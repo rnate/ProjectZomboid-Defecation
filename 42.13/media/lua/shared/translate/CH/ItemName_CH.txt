@@ -1,0 +1,5 @@
+ItemName_CH = {
+    ItemName_Defecation.HumanFeces = "人類糞便",
+	ItemName_Defecation.AntiDiarrhealPillBox = "盒裝止瀉藥",
+	ItemName_Defecation.AntiDiarrhealPill = "止瀉藥丸",
+}

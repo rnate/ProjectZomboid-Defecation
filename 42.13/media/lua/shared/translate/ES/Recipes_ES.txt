@@ -1,0 +1,3 @@
+Recipes_ES = {
+    Recipe_OpenAntiDiarrhealPillBox = "Abrir caja de pastillas anti-diarreicas"
+}

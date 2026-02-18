@@ -1,0 +1,39 @@
+Sandbox_ES = {
+	Sandbox_Defecation = "Defecation",
+
+	Sandbox_Defecation_DefecateTimeMultiplier = "Multiplicador del tiempo para defecar",
+	Sandbox_Defecation_DefecateTimeMultiplier_tooltip = "Que tanto tiempo tarda en defecar una vez que comience el proceso",
+	
+	Sandbox_Defecation_DefecateIncreaseMultiplier = "Necesidad del incremento de la necesidad",
+	Sandbox_Defecation_DefecateIncreaseMultiplier_tooltip = "Que tan rápido incrementa la necesidad de defecar % cada 10 minutos",
+	
+	Sandbox_Defecation_DefecatedBottomsMultiplier = "Multiplicador de los efectos de la necesidad",
+	Sandbox_Defecation_DefecatedBottomsMultiplier_tooltip = "Que tanto estrés e infelicidad incrementa cada 10 minutos",
+	
+	Sandbox_Defecation_VitaminTimeMultiplier = "Multiplicador de tiempo de los efectos de las pastillas",
+	Sandbox_Defecation_VitaminTimeMultiplier_tooltip = "Que tanto tiempo la pastillas para la diarrea pueden afectarte",
+	
+	Sandbox_Defecation_VitaminMaxTimeMultiplier = "Multiplicador del tiempo máximo de la pastilla",
+	Sandbox_Defecation_VitaminMaxTimeMultiplier_tooltip = "El tiempo máximo que puede afectarte el consumir multiples pastillas",
+	
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier = "Multiplicador del malestar de las pilas de heces",
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier_tooltip = "Que tanto malestar e infelicidad gana el jugador al estar cerca de heces",
+	
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier = "Multiplicador del incremento de la diarrea",
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier_tooltip = "Que tanto la diarrea puede multiplicar el aumento de la necesidad de defecar %",
+	
+	Sandbox_Defecation_FartNoiseRadiusMultiplier = "Multiplicador del radio del sonido del pedo",
+	Sandbox_Defecation_FartNoiseRadiusMultiplier_tooltip = "Que tan fuerte puede ser el sonido después de defecar",
+	
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier = "Multiplicador del radio del sonido del inodoro",
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier_tooltip = "Que tan ruido puede ser el inodoro",
+	
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier = "Multiplicador de la disminución de calorías cuando enfermas",
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier_tooltip = "Cantidad de calorías que disminuyen cuando estas enfermo",
+	
+	Sandbox_Defecation_SickThirstRemovedMultiplier = "Multiplicador de la disminución de la sed",
+	Sandbox_Defecation_SickThirstRemovedMultiplier_tooltip = "Cantidad de sed que disminuye cuando estas enfermo",
+	
+	Sandbox_Defecation_CanPooSelf = "Puedes defecarte encima",
+	Sandbox_Defecation_CanPooSelf_tooltip = "Desmarca para deshabilitar la función de "defecarte encima"",
+}

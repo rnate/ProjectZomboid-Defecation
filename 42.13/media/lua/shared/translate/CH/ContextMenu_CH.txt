@@ -1,0 +1,5 @@
+ContextMenu_CH = {
+	ContextMenu_Defecate = "排泄",
+	ContextMenu_Defecated = " (沾染排泄物)",
+	ContextMenu_DefecateSterilize = "清潔",
+}

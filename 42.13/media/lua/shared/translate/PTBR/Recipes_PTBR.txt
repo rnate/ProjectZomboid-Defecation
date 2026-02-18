@@ -1,0 +1,3 @@
+Recipes_PTBR = {
+	Recipe_OpenBoxOfAntiDiarrhealPills = "Abrir Caixa de Remédio para Diarreia"
+}

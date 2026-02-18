@@ -1,0 +1,39 @@
+Sandbox_CH = {
+	Sandbox_Defecation = "排泄行為",
+
+	Sandbox_Defecation_DefecateTimeMultiplier = "排泄時間乘數",
+	Sandbox_Defecation_DefecateTimeMultiplier_tooltip = "開始進行排泄動作時所需花費的時間",
+	
+	Sandbox_Defecation_DefecateIncreaseMultiplier = "便意累積速率乘數",
+	Sandbox_Defecation_DefecateIncreaseMultiplier_tooltip = "每十分鐘累積便意的百分比速率有多快",
+	
+	Sandbox_Defecation_DefecatedBottomsMultiplier = "拉褲子心情差的累積乘數",
+	Sandbox_Defecation_DefecatedBottomsMultiplier_tooltip = "因拉褲子而造成壓力與不悅的累積程度",
+	
+	Sandbox_Defecation_VitaminTimeMultiplier = "維他命時效乘數",
+	Sandbox_Defecation_VitaminTimeMultiplier_tooltip = "維他命將能作用多少時間",
+	
+	Sandbox_Defecation_VitaminMaxTimeMultiplier = "維他命最長時效乘數",
+	Sandbox_Defecation_VitaminMaxTimeMultiplier_tooltip = "服用大量維他命後的最長作用時間",
+	
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier = "接近人類糞便時的不悅程度",
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier_tooltip = "在接近糞便時能造成多少負面情緒與病徵",
+	
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier = "腹瀉增快便意乘數",
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier_tooltip = "腹瀉狀態將增加多快的便意累積百分比",
+	
+	Sandbox_Defecation_FartNoiseRadiusMultiplier = "屁聲傳遞範圍",
+	Sandbox_Defecation_FartNoiseRadiusMultiplier_tooltip = "排泄時所放的屁有多大聲",
+	
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier = "馬桶沖水聲傳遞範圍",
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier_tooltip = "馬桶沖水聲有多大聲",
+	
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier = "生病時的卡路里消耗乘數",
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier_tooltip = "當處於生病狀態時將消耗多少卡路里",
+	
+	Sandbox_Defecation_SickThirstRemovedMultiplier = "生病時的口渴移除乘數",
+	Sandbox_Defecation_SickThirstRemovedMultiplier_tooltip = "當處於生病狀態時將移除多少口渴程度",
+	
+	Sandbox_Defecation_CanPooSelf = "是否會拉在自己身上",
+	Sandbox_Defecation_CanPooSelf_tooltip = "取消勾選將關閉拉在自己身上的機制",
+}

@@ -1,0 +1,5 @@
+ContextMenu_ES = {
+	ContextMenu_Defecate = "Defecar",
+	ContextMenu_Defecated = " (Defecado)",
+	ContextMenu_DefecateSterilize = "Limpiar las heces",
+}

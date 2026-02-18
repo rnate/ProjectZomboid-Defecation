@@ -1,0 +1,11 @@
+Tooltip_CH = {
+	Tooltip_AntiDiarrhealPill = "需要時請每三 (3) 個小時服用 (1) 一顆膠囊.<br>請勿在六小時內服用超過兩顆膠囊.",
+	Tooltip_DefecateDefault = "使用 1 張撕開的床單, 紙張, 餐巾, 廁紙, 書籍, 漫畫書, 雜誌或報紙以排便.",
+	Tooltip_DefecateNeed = "你需要使用至少 1 張撕開的床單, 書籍, 漫畫書, 雜誌, 報紙, 紙張, 廁紙或餐巾才得以排便.",
+	Tooltip_DefecateDriving = "你難以在駕駛中進行排便.",
+	Tooltip_DefecateUse = "使用 ",
+	Tooltip_DefecateToDefecate = " 排便.",
+	Tooltip_DefecateNotPotentEnough = " is not potent enough.",
+	Tooltip_DefecatedSelf = "I've defecated myself...",
+	Tooltip_DefecateBurnFeces = "Burn Feces"
+}

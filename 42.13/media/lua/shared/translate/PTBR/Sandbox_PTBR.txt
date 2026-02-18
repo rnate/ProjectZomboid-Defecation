@@ -1,0 +1,39 @@
+Sandbox_PTBR = {
+	Sandbox_Defecation = "Defecação",
+
+	Sandbox_Defecation_DefecateTimeMultiplier = "Multiplicador do tempo para defecar",
+	Sandbox_Defecation_DefecateTimeMultiplier_tooltip = "Define quanto tempo leva para defecar depois que você começa o processo",
+	
+	Sandbox_Defecation_DefecateIncreaseMultiplier = "Multiplicador de aumento da defecação",
+	Sandbox_Defecation_DefecateIncreaseMultiplier_tooltip = "Define a velocidade com que a % de defecação aumenta a cada dez minutos (o padrão dá cerca de 66,6% de defecação em 24 horas se o estômago estiver neutro)",
+	
+	Sandbox_Defecation_DefecatedBottomsMultiplier = "Multiplicador de roupa suja",
+	Sandbox_Defecation_DefecatedBottomsMultiplier_tooltip = "Define quanto estresse e infelicidade você ganha a cada dez minutos",
+	
+	Sandbox_Defecation_VitaminTimeMultiplier = "Multiplicador de duração do antidiarreico",
+	Sandbox_Defecation_VitaminTimeMultiplier_tooltip = "Define por quanto tempo as vitaminas antidiarreicas podem te afetar (o padrão é 3 horas)",
+	
+	Sandbox_Defecation_VitaminMaxTimeMultiplier = "Multiplicador de duração máxima do antidiarreico",
+	Sandbox_Defecation_VitaminMaxTimeMultiplier_tooltip = "Define o tempo máximo que as vitaminas podem te afetar se você consumir várias (o padrão é 6 horas)",
+	
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier = "Multiplicador de insalubridade de fezes",
+	Sandbox_Defecation_FecesPileUnhealthyMultiplier_tooltip = "Define quanta doença e infelicidade o jogador ganha por ter pilhas de fezes por perto",
+	
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier = "Multiplicador de aumento por diarreia",
+	Sandbox_Defecation_DiarrheaIncreaseMultiplier_tooltip = "Define o quanto ter diarreia pode multiplicar o aumento da sua % de defecação",
+	
+	Sandbox_Defecation_FartNoiseRadiusMultiplier = "Multiplicador do raio do som de peido",
+	Sandbox_Defecation_FartNoiseRadiusMultiplier_tooltip = "Define o quão alto o som pode ser após defecar (o padrão é 15, mas isso só se aplica se você estiver doente, azarado e com o estômago fraco)",
+	
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier = "Multiplicador do raio do som do vaso",
+	Sandbox_Defecation_ToiletNoiseRadiusMultiplier_tooltip = "Define o quão alto o barulho do vaso pode ser (o padrão é raio de 10 quadrados, ou seja, cerca de 5 quadrados para cada direção)",
+	
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier = "Multiplicador de calorias removidas (doente)",
+	Sandbox_Defecation_SickCaloriesRemovedMultiplier_tooltip = "Quantidade de calorias removidas quando você está doente",
+	
+	Sandbox_Defecation_SickThirstRemovedMultiplier = "Multiplicador de sede removida (doente)",
+	Sandbox_Defecation_SickThirstRemovedMultiplier_tooltip = "Quantidade de sede removida quando você está doente",
+	
+	Sandbox_Defecation_CanPooSelf = "Pode se sujar",
+	Sandbox_Defecation_CanPooSelf_tooltip = "Desmarque para desativar a função de 'se sujar' ao não conseguir segurar",
+}

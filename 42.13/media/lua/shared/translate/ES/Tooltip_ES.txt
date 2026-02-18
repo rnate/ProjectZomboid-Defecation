@@ -1,0 +1,11 @@
+Tooltip_ES = {
+	Tooltip_AntiDiarrhealPill = "Toma UNA (1) capsula cuando necesites por cada TRES (3) Horas.<br>No tomes mas de dos capsulas por seis horas.",
+	Tooltip_DefecateDefault = "Usa 1 retales de tela, hoja de papel, pañuelo, papel de baño, libro, comic, revista, o periódico para defecar.",
+	Tooltip_DefecateNeed = "Necesitas al menos 1 retales de tela, libro, cómic, revista, periódico, hoja de papel, papel de baño, o pañuelo para defecar.",
+	Tooltip_DefecateDriving = "No puedes defecar mientras conduces.",
+	Tooltip_DefecateUse = "Usa ",
+	Tooltip_DefecateToDefecate = " para defecar.",
+	Tooltip_DefecateNotPotentEnough = " is not potent enough.",
+	Tooltip_DefecatedSelf = "I've defecated myself...",
+	Tooltip_DefecateBurnFeces = "Burn Feces"
+}

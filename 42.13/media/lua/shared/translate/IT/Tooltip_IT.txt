@@ -1,0 +1,11 @@
+Tooltip_IT = {
+	Tooltip_AntiDiarrhealPill = "Assumere UNA (1) capsula secondo necessità ogni TRE (3) ore.<br>Non assumere più di due capsule ogni 6 ore.",
+	Tooltip_DefecateDefault = "Usare 1 foglio strappato, un foglio di carta, un fazzoletto di carta, un libro, un fumetto, una rivista o un giornale per defecare.",
+	Tooltip_DefecateNeed = "È necessario almeno 1 foglio strappato, libro, fumetto, rivista, giornale, foglio di carta, carta igienica o fazzoletto di carta per defecare.",
+	Tooltip_DefecateDriving = "Non puoi defecare mentre guidi.",
+	Tooltip_DefecateUse = "Usa ",
+	Tooltip_DefecateToDefecate = " per defecare.",
+	Tooltip_DefecateNotPotentEnough = " is not potent enough.",
+	Tooltip_DefecatedSelf = "I've defecated myself...",
+	Tooltip_DefecateBurnFeces = "Burn Feces"
+}

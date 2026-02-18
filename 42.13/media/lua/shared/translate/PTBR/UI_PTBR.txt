@@ -1,0 +1,15 @@
+UI_PTBR = {
+	UI_optionscreen_binding_DefecationStatus = "Status de Defecação",
+	
+	UI_options_1436878551ShowNumericStatus_checkBox = "Status Numérico",
+	UI_options_1436878551ShowNumericStatus_checkBox_tooltip = "Desmarque para ocultar os números exibidos na janela 'Status de Defecação'.",
+	
+	UI_options_1436878551DefecationStatus_keybind = "Status de Defecação",
+	UI_options_1436878551DefecationStatus_keybind_tooltip = "Tecla para mostrar/ocultar a janela 'Status de Defecação'.",
+
+	UI_options_1436878551StomachSounds_checkBox = "Sons do Estômago",
+	UI_options_1436878551StomachSounds_checkBox_tooltip = "Desmarque para não reproduzir os sons de 'ronco do estômago' quando precisar defecar.",
+
+	UI_options_1436878551DefecateSounds_checkBox = "Sons de Defecação",
+	UI_options_1436878551DefecateSounds_checkBox_tooltip = "Desmarque para não reproduzir os sons de 'defecação' ao defecar. <LINE><RED>Atenção! Os zumbis irão ouvi-lo independentemente desta configuração. Ajuste 'Multiplicador do Raio do Som de Peido' nas Configurações de Sandbox para alterar o alcance.",
+}
