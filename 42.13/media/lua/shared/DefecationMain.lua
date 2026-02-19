@@ -174,6 +174,7 @@ local function _rightClick(player, context, worldObjects)
 	local toiletDefecateOption = nil
 	local existingSubMenu = nil
 	local objectSquare = worldObjects[1]:getSquare()
+	local existingContextMenu = getPlayerContextMenu(player)
 	
 	for i = 1, objectSquare:getObjects():size() do
 		local object = objectSquare:getObjects():get(i - 1)
@@ -183,23 +184,7 @@ local function _rightClick(player, context, worldObjects)
 		end
 
 		local checkForFixture = object:getTextureName() and luautils.stringStarts(object:getTextureName(), "fixtures_bathroom_01")
-		if (checkForFixture) then
-			local customName = ""
-			local objectProperties = object:getSprite():getProperties()
-			if objectProperties:has("CustomName") then
-				customName = string.lower(objectProperties:get("CustomName"))
-			end
-
-			local objectModData = (object:hasModData() and object:getModData()) or nil
-			local hasBuggedWater = objectModData ~= nil and objectModData["waterMax"] and objectModData["waterMax"] >= 9000
-			if (string.find(customName, "toilet") and hasBuggedWater) then
-				objectModData["waterMax"] = 20
-				objectModData["waterAmount"] = 20
-				object:transmitModData()
-			end
-		end
-
-		if (specificPlayer:getModData()["Defecate"] >= 0.4 and checkForFixture and object:hasWater() and object:getFluidAmount() >= 10.0) then
+		if (specificPlayer:getModData()["Defecate"] >= 0.4 and checkForFixture and object:hasWater() and (object:getFluidAmount() or 0) >= 10.0) then
 			local source = _getMoveableDisplayName(object)
 			if source == nil and instanceof(object, "IsoWorldInventoryObject") and object:getItem() then
 				source = object:getItem():getDisplayName()
@@ -214,8 +199,6 @@ local function _rightClick(player, context, worldObjects)
 			end
 
 			if (string.find(customName, "toilet")) then
-				local existingContextMenu = getPlayerContextMenu(player)
-
 				for j = 1, #existingContextMenu.options do
 					local menuOption = existingContextMenu.options[j]
 
@@ -367,19 +350,38 @@ local function _washRightClick(player, context, worldObjects)
 		local existingSubMenu = nil
 		local washOption = nil
 		local sterilizeSubMenu = {}
+		local waterSource = _getMoveableDisplayName(storeWater)
+		local waterRemaining = 0
+
+		if waterSource == nil and instanceof(storeWater, "IsoWorldInventoryObject") and storeWater:getItem() then
+			waterSource = storeWater:getItem():getDisplayName()
+		elseif (isRainCollector) then
+			waterSource = storeWater:getFluidContainer():getContainerName()
+		elseif waterSource == nil then
+			waterSource = getText("ContextMenu_NaturalWaterSource")
+		end
+
+		if storeWater:hasComponent(ComponentType.FluidContainer) then
+			waterRemaining = storeWater:getFluidContainer():getAmount()
+		else
+			waterRemaining = storeWater:getFluidAmount()
+		end
+		
+		local bleachText = "0"
+		if (bleachItem ~= nil) then
+			bleachText = tostring(math.min(math.floor(bleachValue * 1000), 300))
+		end
+
+		local cleaningFluidName = getText("Fluid_Name_Bleach") .. " / " .. getText("Fluid_Name_CleaningLiquid")
+		if (fluidTypeString == "CleaningLiquid") then
+			cleaningFluidName = getText("Fluid_Name_CleaningLiquid")
+		elseif (fluidTypeString == "Bleach") then
+			cleaningFluidName = getText("Fluid_Name_Bleach")
+		end
 
 		for i = 1, #defecatedItems do
 			local defecatedItem = defecatedItems[i]
 			local sterilizeOption = {}
-			local waterSource = _getMoveableDisplayName(storeWater)
-			if waterSource == nil and instanceof(storeWater, "IsoWorldInventoryObject") and storeWater:getItem() then
-				waterSource = storeWater:getItem():getDisplayName()
-			elseif (isRainCollector) then
-				waterSource = storeWater:getFluidContainer():getContainerName()
-			elseif waterSource == nil then
-				waterSource = getText("ContextMenu_NaturalWaterSource")
-			end
-
 			local existingContextMenu = getPlayerContextMenu(0)
 
 			for j = 1, #existingContextMenu.options do
@@ -394,30 +396,12 @@ local function _washRightClick(player, context, worldObjects)
 					end
 
 					sterilizeOption = sterilizeSubMenu:addOption(defecatedItem:getName(), specificPlayer, _washDefecated, storeWater:getSquare(), defecatedItem, bleachItem, storeWater, fluidTypeString)
+					break
 				end
-			end
-
-			local waterRemaining = 0
-			if storeWater:hasComponent(ComponentType.FluidContainer) then
-				waterRemaining = storeWater:getFluidContainer():getAmount()
-			else
-				waterRemaining = storeWater:getFluidAmount()
 			end
 
 			if (waterRemaining < 7 or bleachValue < 0.3) then
 				sterilizeOption.notAvailable = true
-			end
-
-			local bleachText = "0"
-			if (bleachItem ~= nil) then
-				bleachText = tostring(math.min(math.floor(bleachValue * 1000), 300))
-			end
-
-			local cleaningFluidName = getText("Fluid_Name_Bleach") .. " / " .. getText("Fluid_Name_CleaningLiquid")
-			if (fluidTypeString == "CleaningLiquid") then
-				cleaningFluidName = getText("Fluid_Name_CleaningLiquid")
-			elseif (fluidTypeString == "Bleach") then
-				cleaningFluidName = getText("Fluid_Name_Bleach")
 			end
 
 			sterilizeOption.toolTip = ISWorldObjectContextMenu.addToolTip()

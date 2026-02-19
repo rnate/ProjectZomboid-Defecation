@@ -79,7 +79,7 @@ function DefecationWashAction:perform()
 end
 
 function DefecationWashAction:getDuration()
-	return 200
+	return 400
 end
 
 function DefecationWashAction:new(character, defecatedItem, bleachItem, storeWater, fluidTypeString)
