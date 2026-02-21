@@ -1,8 +1,5 @@
 local DefecationFunctions = require("DefecationFunctions")
-
-DefecationFunctions.firstRunTimer = false
 DefecationFunctions.defecationSquares = {}
-DefecationFunctions.specificPlayer = getSpecificPlayer(0)
 
 local function _defecationItemCheckRightClick(_, objectSquare, tpItem, specificPlayer)
 	if (specificPlayer ~= nil and not specificPlayer:isDriving()) then
@@ -184,7 +181,7 @@ local function _rightClick(player, context, worldObjects)
 		end
 
 		local checkForFixture = object:getTextureName() and luautils.stringStarts(object:getTextureName(), "fixtures_bathroom_01")
-		if (specificPlayer:getModData()["Defecate"] >= 0.4 and checkForFixture and object:hasWater() and (object:getFluidAmount() or 0) >= 10.0) then
+		if (specificPlayer:getModData()["Defecate"] >= 0.4 and checkForFixture and object:hasWater() and object:getFluidAmount() >= 10.0) then
 			local source = _getMoveableDisplayName(object)
 			if source == nil and instanceof(object, "IsoWorldInventoryObject") and object:getItem() then
 				source = object:getItem():getDisplayName()
@@ -747,23 +744,23 @@ local function _vitaminTimer(specificPlayerModData)
 	end
 end
 
+local function _playerSpawn(playerIndex, player)
+	DefecationFunctions.specificPlayer = player
+	_fixVitaminValue(player:getModData())
+	_fixDefecateValue(player:getModData())
+end
+Events.OnCreatePlayer.Add(_playerSpawn)
+
 local function _defecationTimer()
 	if (not DefecationFunctions.specificPlayer) then
 		return
 	end
 
 	local specificPlayerModData = DefecationFunctions.specificPlayer:getModData()
-
-	if DefecationFunctions.firstRunTimer then
-		_addStress(specificPlayerModData)
-		_diarrheaCheck(specificPlayerModData)
-		_vitaminTimer(specificPlayerModData)
-		_defecatedBottomsMood()
-	else
-		DefecationFunctions.firstRunTimer = true
-		_fixVitaminValue(specificPlayerModData)
-		_fixDefecateValue(specificPlayerModData)
-	end
+	_addStress(specificPlayerModData)
+	_diarrheaCheck(specificPlayerModData)
+	_vitaminTimer(specificPlayerModData)
+	_defecatedBottomsMood()
 
 	DefecationFunctions.specificPlayer:transmitModData()
 	DefecationFunctions.DefecationWindow.updateWindow()
