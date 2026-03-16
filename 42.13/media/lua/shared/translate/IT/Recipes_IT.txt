@@ -1,3 +1,0 @@
-Recipes_IT = {
-	Recipe_OpenAntiDiarrhealPillBox = "Apri scatola di pillole antidiarroiche"
-}

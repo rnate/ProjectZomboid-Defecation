@@ -1,3 +1,0 @@
-Recipes_CH = {
-	Recipe_OpenAntiDiarrhealPillBox = "打開盒裝止瀉藥"
-}
