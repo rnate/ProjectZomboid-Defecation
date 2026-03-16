@@ -1,5 +1,5 @@
 {
-    "ItemName_Defecation.HumanFeces": "人類糞便",
-    "ItemName_Defecation.AntiDiarrhealPillBox": "盒裝止瀉藥",
-    "ItemName_Defecation.AntiDiarrhealPill": "止瀉藥丸"
+    "Defecation.HumanFeces": "人類糞便",
+    "Defecation.AntiDiarrhealPillBox": "盒裝止瀉藥",
+    "Defecation.AntiDiarrhealPill": "止瀉藥丸"
 }

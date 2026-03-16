@@ -1,5 +1,5 @@
 {
-    "ItemName_Defecation.HumanFeces": "Fezes Humanas",
-    "ItemName_Defecation.AntiDiarrhealPillBox": "Caixa de Remédio para Diarreia",
-    "ItemName_Defecation.AntiDiarrhealPill": "Comprimido para Diarreia"
+    "Defecation.HumanFeces": "Fezes Humanas",
+    "Defecation.AntiDiarrhealPillBox": "Caixa de Remédio para Diarreia",
+    "Defecation.AntiDiarrhealPill": "Comprimido para Diarreia"
 }
