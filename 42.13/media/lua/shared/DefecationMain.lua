@@ -263,14 +263,13 @@ local function _rightClick(player, context, worldObjects)
 		end
 	end
 
-	--!!Disabled as squares visibly had no fire but still could burn character - seems to be vanilla bug!!--
-	-- if fecesObject ~= nil then
-	-- 	local lighter = specificPlayer:getInventory():getFirstTagRecurse(ItemTag.START_FIRE) or specificPlayer:getInventory():getFirstTypeRecurse("Lighter") or specificPlayer:getInventory():getFirstTypeRecurse("Matches")
+	if fecesObject ~= nil then
+		local lighter = specificPlayer:getInventory():getFirstTagRecurse(ItemTag.START_FIRE) or specificPlayer:getInventory():getFirstTypeRecurse("Lighter") or specificPlayer:getInventory():getFirstTypeRecurse("Matches")
 		
-	-- 	if specificPlayer:getInventory():containsEvalRecurse(_predicatePetrol) and lighter then
-	-- 		context:addOption(getText("Tooltip_DefecateBurnFeces"), worldObjects, _burnFeces, fecesObject, fecesOnSquareCount, specificPlayer, lighter)
-	-- 	end
-	-- end
+		if specificPlayer:getInventory():containsEvalRecurse(_predicatePetrol) and lighter then
+			context:addOption(getText("Tooltip_DefecateBurnFeces"), worldObjects, _burnFeces, fecesObject, fecesOnSquareCount, specificPlayer, lighter)
+		end
+	end
 end
 Events.OnFillWorldObjectContextMenu.Add(_rightClick)
 
